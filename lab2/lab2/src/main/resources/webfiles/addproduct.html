@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Add car</title></head>
+<body>
+</div>
+        <h3>Add Product</h3>
+        <form th:object="${product}"  action="add" method="post">
+            Number :<input type="text" th:field="*{number}" />
+            <span th:if="${#fields.hasErrors('number')}" th:errors="*{number}">number Error</span><br />
+            Name : <input type="text" th:field="*{name}" />
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">name Error</span><br />
+            Price: <input type="text" th:field="*{price}" /><br />
+            <input type="submit" value="Save" />
+        </form>
+    <br />
+
+</body>
+</html>
