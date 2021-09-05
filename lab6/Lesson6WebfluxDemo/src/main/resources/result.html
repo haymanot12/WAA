@@ -1,0 +1,9 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form action="process" method="get" th:object="${message}">
+  ID <input type="text" th:field="*{id}" /> <br/>
+  Text <input type="text" th:field="*{text}" /> <br/>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

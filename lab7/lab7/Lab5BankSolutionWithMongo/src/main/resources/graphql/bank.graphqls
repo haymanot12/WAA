@@ -1,0 +1,19 @@
+type Account {
+    accountnumber : Int!
+    entryList: [AccountEntry]!
+    accountHolder: String!
+    balance: Float!
+}
+type AccountEntry {
+    date: String
+    amount: Float!
+    description: String!
+}
+type Query {
+accounts(count: Int):[Account]
+account(accountnumber: ID):Account
+}
+
+type Mutation {
+createAccount(accountnumber: Int!, accountHolder:String!,date:String,amount:Float,description:String):Account
+}
